@@ -7,7 +7,8 @@
 //
 
 #import "AppDelegate.h"
-
+//#import "Inteli405BookItemsViewController.h"
+#import "Inteli405TabBarController.h"
 @interface AppDelegate ()
 
 @end
@@ -17,6 +18,19 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+//    Inteli405BookItemsViewController *bookItemsViewController = [[Inteli405BookItemsViewController alloc] init];
+//    self.window.rootViewController = bookItemsViewController;
+//    self.window.backgroundColor = [UIColor whiteColor];
+//    
+//    /*????*/
+//    [self.window makeKeyAndVisible];
+    
+    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    self.window.backgroundColor = [UIColor whiteColor];
+    [self.window makeKeyAndVisible];
+    Inteli405TabBarController *tabBar = [[Inteli405TabBarController alloc] init];
+    self.window.rootViewController = tabBar;
     return YES;
 }
 
